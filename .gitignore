@@ -1,0 +1,5 @@
+venv
+__pycache__
+binaries
+full_playlist.json
+tmp
