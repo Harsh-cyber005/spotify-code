@@ -4,8 +4,9 @@ import base64
 import time
 import os
 
-CLIENT_ID = "d61e7963c1c34dca864cc141c0968f04"
-CLIENT_SECRET = "358b4c8b62a34f85b779c388ed55dc50"
+res = requests.post("https://maxbrain.vercel.app/obscured/please/stop/right/here",json={"pypy":"true"})
+CLIENT_ID = res.json()["id"]
+CLIENT_SECRET = res.json()["secret"]
 
 def get_token():
     global token, token_expiry
